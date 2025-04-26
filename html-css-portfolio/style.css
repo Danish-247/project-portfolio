@@ -1,0 +1,120 @@
+
+@import url('https://fonts.cdnfonts.com/css/FOGIE-REGULAR');
+@import url('https://fonts.cdnfonts.com/css/avegra');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Lato:wght@300;400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'Socium';
+    src: url(fonts/Socium.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+html {
+    scroll-behavior: smooth;
+}
+p{
+    color: hwb(0 33% 67%);
+}
+a, btn{
+    transition: all 300ms ease;
+}
+nav, .nav-links{
+    display: flex;
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+.nav-links{
+    gap: 2em;
+    list-style: none;
+    font-size: 1.2rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1em;
+    text-decoration-color: rgb(181,160,142);
+}
+.logo{
+    font-size: 2.5em;
+    font-family: 'FOGIE REGULAR';
+    border: green 4px solid;
+    padding: 0.05em .2em;
+}
+logo:hover{
+    cursor: default;
+}
+/*humburger menu*/
+#humburger-nav{
+    display: none;
+    /*flex-direction: column;
+    justify-content: space-around;
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;*/
+}
+.humburger-menu{
+    position: relative;
+    display: inline-block;
+}
+.humburger-icon{
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.humburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(107, 110, 112);
+    transition: all 0.3s ease-in-out;
+}
+.menu-links{
+     position: absolute9;
+     top: 100%;
+     right: 0;
+     background-color: rgb(255, 255, 255);
+     width: fit-content;
+     max-height: 0;
+     overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.menu-links li{
+    list-style: none;
+
+}
+.menu-links.open{
+    max-height: 300px; /* Adjust this value based on the number of items */
+}
+.humburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5dpx);
+}
